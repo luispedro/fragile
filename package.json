@@ -1,0 +1,14 @@
+{ "readme": "http://github.com/coffeemate/fragile#readme"
+, "version": "0.0.0"
+, "description": "A pure, minimalist unit testing tool for nodejs"
+, "main": "index"
+, "bin": {"fragile": "./lib/cli.js" }
+, "author": "Kadir Pekel <kadirpekel@gmail.com>"
+, "name": "fragile"
+, "engines": { "node": ">=0.1.101" }
+, "repository" :
+  {
+    "type": "git"
+  , "url": "http://github.com/coffeemate/fragile"
+  }
+}

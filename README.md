@@ -25,7 +25,8 @@ Also currently it run tests synchronously.
 
 
 Test the file simply typing commands below.
-	
+
+	> npm install color	
 	> git clone http://github.com/coffeemate/fragile.git
 	> cd fragile
 	> npm install

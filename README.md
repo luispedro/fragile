@@ -35,6 +35,6 @@ Test the file simply typing commands below.
 
 The result displayed as below.
 
-![Screenshot](http://web15.twitpic.com/img/169910413-2d6b7295bf1415cf46678b57fcabae72.4ca3a8d0-full.png)
+![Screenshot](http://kadirpekel.com/fragile.png)
 
 

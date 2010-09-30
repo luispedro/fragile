@@ -3,34 +3,57 @@ Fragile
 
 A pure, minimal unit testing tool for nodejs.
 
-It's a new born baby project, currenty it tests such module given below.
-Also currently it run tests synchronously.
+It's a new born baby project. Currently it can run tests asynchronously.
 
 	// test-example.js
-	
-	module.exports = {
-	  setup: function () {
-	    this.foo = 'bar';
-	  },
-	  testA: function (assert) {
-	    assert.equal(this.foo, 'bar', 'This must pass');    
-	  },
-	  testB: function (assert) {
-	    assert.equal(this.foo, 'baz', 'This must fail');
-	  },
-	  teardown: function () {
-	    delete this.foo;
-	  }
-	}
+
+	var assert = require('assert'),
+	  fs = require('fs');
+
+	exports.setup = function (done) {
+	  this.foo = 'bar';
+	  done();
+	};
+
+	exports.testSync1 = function (done) {
+	  assert.strictEqual('123', 123, "This must fail with this assertion message");
+	  done();
+	};
+
+	exports.testAsync1 = function (done) {
+	  var self = this;
+	  fs.readFile('./foo', function (err, data) {
+	    if (err) assert.fail(err);
+	    assert.ok(data);
+	    assert.equal(self.foo, data.toString());
+	    done();
+	  });
+	};
+
+	exports.testSync2 = function (done) {
+	  assert.equal('123', 123);
+	  done();
+	};
+
+	exports.testAsync2 = function (done) {
+	  fs.readFile('./absent', function (err, data) {
+	    if (err) assert.ifError(err);
+	    assert.ok(data);
+	    assert.equal(self.foo, data.toString());
+	    done();
+	  });
+	};
+
+	exports.teardown = function (done) {
+	  // throw new Error('Something went wrong');
+	  delete this.foo;
+	  done();
+	};
 
 
 Test the file simply typing commands below.
 
-	> npm install color	
-	> git clone http://github.com/coffeemate/fragile.git
-	> cd fragile
-	> npm install
-	> cd examples
+	> npm install fragile
 	> fragile test-example.js
 
 The result displayed as below.

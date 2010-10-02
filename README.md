@@ -40,7 +40,7 @@ It's a new born baby project. Currently it can run tests asynchronously.
 Test the file simply typing commands below.
 
 	> npm install fragile
-	> fragile examples/
+	> fragile examples/*
 
 The result displayed as below.
 

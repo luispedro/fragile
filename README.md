@@ -40,9 +40,10 @@ It's a new born baby project. Currently it can run tests asynchronously.
 Test the file simply typing commands below.
 
 	> npm install fragile
-	> fragile examples/*
+	> fragile test-example.js
 
-The result displayed as below.
+
+A sample report displayed below
 
 ![Screenshot](http://kadirpekel.com/fragile.png)
 

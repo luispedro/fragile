@@ -4,4 +4,7 @@
  * MIT Licensed
  */
  
+/*
+* Point fragile
+*/
 exports = require('./lib/fragile');

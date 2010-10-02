@@ -49,9 +49,3 @@ Test the file simply typing commands below.
 A sample multi-test case report displayed below
 
 ![Screenshot](http://kadirpekel.com/fragile.png)
-
-
-TODO
-----
-
- * Write errors to stderr.

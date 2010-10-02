@@ -1,9 +1,12 @@
 Fragile
 =======
 
-A pure, minimal unit testing tool for nodejs.
+Fragile is a very lightweight command line unit testing tool for nodejs.
+Please note that fragile is not a unit testing framework, it only reports
+your tests to console. If you need rather advanced unit testing framework
+go for [nodeunit](http://github.com/caolan/nodeunit)
 
-It's a new born baby project. Currently it can run tests asynchronously.
+Sample test case:
 
 	// test-example.js
 	
@@ -43,8 +46,12 @@ Test the file simply typing commands below.
 	> fragile test-example.js
 
 
-A sample report displayed below
+A sample multi-test case report displayed below
 
 ![Screenshot](http://kadirpekel.com/fragile.png)
 
 
+TODO
+----
+
+ * Write errors to stderr.
